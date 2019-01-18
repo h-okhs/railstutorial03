@@ -105,6 +105,7 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.13.1)
+    mysql2 (0.5.2-x64-mingw32)
     nenv (0.3.0)
     nio4r (2.3.1)
     nokogiri (1.10.1-x64-mingw32)
@@ -238,6 +239,7 @@ DEPENDENCIES
   listen (= 3.1.5)
   minitest (= 5.10.3)
   minitest-reporters (= 1.1.14)
+  mysql2
   pg (= 0.20.0)
   puma (= 3.9.1)
   rails (= 5.1.6)

@@ -6,11 +6,21 @@ RSpec.describe StaticPagesController, type: :controller do
 
     let(:base_title) { 'Ruby on Rails Tutorial Sample App' }
 
-    describe "GET root" do
-      it "title has right text" do
+    describe "title has right text" do
+      it "get home" do
         get :home
         expect(response).to have_http_status(:success)
-        assert_select "title", "Home | #{base_title}"
+        assert_select "title", base_title
+      end
+      it "get help" do
+        get :help
+        expect(response).to have_http_status(:success)
+        assert_select "title", "Help | " + base_title
+      end
+      it "get about" do
+        get :about
+        expect(response).to have_http_status(:success)
+        assert_select "title", "About | " + base_title
       end
     end
   end
